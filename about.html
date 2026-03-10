@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kim Studios | About Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-dot"></div><div class="cursor-outline"></div>
+    <div class="background-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
+
+    <button id="bgm-toggle" class="interactive" onclick="toggleBGM()">🔊 Music: OFF</button>
+    <div id="yt-player-container"></div>
+
+    <header>
+        <h1>Kim Studios</h1>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span>[ SYSTEM ONLINE ]</span> <span>///</span> <span>DESIGN MODELS</span> <span>///</span> <span>LANDSCAPES</span> <span>///</span> <span>PHOTOGRAPHY</span> <span>///</span> <span>UI/UX</span> <span>///</span>
+                <span>[ SYSTEM ONLINE ]</span> <span>///</span> <span>LEVEL DESIGN</span> <span>///</span> <span>ENVIRONMENT ART</span> <span>///</span> <span>DESIGN MODELS</span> <span>///</span> <span>UI/UX</span> <span>///</span>
+            </div>
+        </div>
+        <nav id="navbar">
+            <a href="index.html" class="interactive">home</a>
+            <a href="landscape.html" class="interactive">landscapes</a>
+            <a href="photography.html" class="interactive">photography</a>
+            <a href="design.html" class="interactive">design</a>
+            <a href="about.html" class="active-link interactive">about</a>
+        </nav>
+    </header>
+
+    <div class="page active">
+        <div class="about-content">
+            <div class="about-left-col">
+                <div class="about-image-wrapper interactive">
+                    <img src="yay.jpg" alt="Player Avatar">
+                </div>
+                
+                <div class="game-container">
+                    <h3>Simulation: Reflex Test</h3>
+                    <div class="game-hud">
+                        <div>Best: <span id="reaction-best">--</span>ms</div>
+                        <div>Last: <span id="reaction-last">--</span>ms</div>
+                    </div>
+                    <div id="reaction-area" class="game-area interactive">
+                        <button id="start-reaction-btn" class="start-game-btn interactive">Init Sequence</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-text-wrapper">
+                <p>My name is Kim, and I'm a 17-year-old student at GGHS with a serious passion for <span class="highlight">playing games</span> with a big inspiration from them.</p>
+                <p style="font-size: 1.1rem; margin-top: 10px; color: #718096;">
+                    You can find me eating jalapeño chips, looking for a strawberry cake to eat, or falling down the rabbit hole of crime documentaries. Human psychology and personal stories are the core mechanics that drive me.
+                </p>
+                
+                <div class="credentials-box">
+                    <h3>Connection Hub</h3>
+                    <ul class="credentials-list">
+                        <li>
+                            <span class="label">Phone</span>
+                            <span class="value">+1 (714) 951-3594</span>
+                        </li>
+                        <li>
+                            <span class="label">Email</span>
+                            <span class="value">
+                                <span id="email-text">kimd4256@gmail.com</span>
+                                <span class="copy-btn interactive" onclick="copyEmail()">Extract</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="label">Location</span>
+                            <span class="value">Garden Grove, CA (Freelance)</span>
+                        </li>
+                        <li>
+                            <span class="label">Education</span>
+                            <span class="value">GGHS Digital Arts Program (Graduating 2027)</span>
+                        </li>
+                    </ul> 
+                </div>
+
+                <div class="game-container">
+                    <h3>Simulation: Aim Training</h3>
+                    <div class="game-hud">
+                        <div>Targets Hit: <span id="game-score-2">0</span></div>
+                        <div>Time: <span id="game-time-2">10.0</span>s</div>
+                    </div>
+                    <div id="game-area-2" class="game-area interactive">
+                        <button id="start-game-btn-2" class="start-game-btn interactive">Init Sequence</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
