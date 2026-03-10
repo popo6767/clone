@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kim Studios | Player 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* --- Welcome Banner Styles --- */
+        .welcome-banner {
+            text-align: center;
+            padding: 3rem 2rem;
+            margin: 2rem auto 3rem auto;
+            max-width: 800px;
+            background: rgba(20, 20, 20, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            font-family: 'Space Grotesk', sans-serif;
+            position: relative;
+            z-index: 10;
+        }
+
+        .welcome-banner .sys-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .welcome-banner p {
+            font-size: 1.1rem;
+            color: #cccccc;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Call to Action Button */
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #000000;
+            background: #00ffcc;
+            text-decoration: none;
+            border-radius: 4px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+        }
+
+        .cta-button:hover {
+            background: #ffffff;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-dot"></div><div class="cursor-outline"></div>
+    <div class="background-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
+
+    <button id="bgm-toggle" class="interactive" onclick="toggleBGM()">🔊 Music: OFF</button>
+    <div id="yt-player-container"></div>
+
+    <header>
+        <h1>Kim Studios</h1>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span>[ SYSTEM ONLINE ]</span> <span>///</span> <span>DESIGN MODELS</span> <span>///</span> <span>LANDSCAPES</span> <span>///</span> <span>PHOTOGRAPHY</span> <span>///</span> <span>UI/UX</span> <span>///</span>
+                <span>[ SYSTEM ONLINE ]</span> <span>///</span> <span>LEVEL DESIGN</span> <span>///</span> <span>ENVIRONMENT ART</span> <span>///</span> <span>DESIGN MODELS</span> <span>///</span> <span>UI/UX</span> <span>///</span>
+            </div>
+        </div>
+        <nav id="navbar">
+            <a href="index.html" class="active-link interactive">home</a>
+            <a href="landscape.html" class="interactive">landscapes</a>
+            <a href="photography.html" class="interactive">photography</a>
+            <a href="design.html" class="interactive">design</a>
+            <a href="about.html" class="interactive">about</a>
+        </nav>
+    </header>
+
+    <div class="page active">
+        
+        <section class="welcome-banner">
+            <div class="banner-content">
+                <h2 class="sys-title">WELCOME</h2>
+                <p>Welcome to Kim Studios. Showcasing landscape elements, photography, design models, and digital experiences.</p>
+                <a href="landscape.html" class="cta-button interactive">INITIATE SEQUENCE</a>
+            </div>
+        </section>
+
+        <div class="slideshow-wrapper interactive">
+            <div class="slideshow-container">
+                <img src="cc.jpg" class="slide fade" style="display:block;" alt="Slide">
+                <img src="ee.png" class="slide fade" alt="Slide">
+                <img src="rr.png" class="slide fade" alt="Slide">
+                <img src="r.png" class="slide fade" alt="Slide">
+                <img src="aa.png" class="slide fade" alt="Slide">
+            </div>
+        </div>
+        <div class="dots-container">
+            <span class="dot interactive" onclick="currentSlide(0)"></span>
+            <span class="dot interactive" onclick="currentSlide(1)"></span>
+            <span class="dot interactive" onclick="currentSlide(2)"></span>
+            <span class="dot interactive" onclick="currentSlide(3)"></span>
+            <span class="dot interactive" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
